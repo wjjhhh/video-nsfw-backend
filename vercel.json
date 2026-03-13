@@ -21,10 +21,5 @@
         }
       ]
     }
-  ],
-  "functions": {
-    "dist/index.js": {
-      "maxDuration": 60
-    }
-  }
+  ]
 }
