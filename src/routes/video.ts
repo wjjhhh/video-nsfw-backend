@@ -65,6 +65,7 @@ const sendSSEvent = (res: Response, event: SSEvent) => {
   res.write(`data: ${JSON.stringify(event.data)}\n\n`);
 };
 
+// @ts-ignore - Type conflict between multer and express types
 router.post('/analyze', upload.single('video'), async (req: Request, res: Response) => {
   let videoPath: string | null = null;
   let convertedPath: string | null = null;
@@ -287,6 +288,7 @@ router.post('/analyze', upload.single('video'), async (req: Request, res: Respon
 });
 
 // Convert video to MP4 for browser playback
+// @ts-ignore - Type conflict between multer and express types
 router.post('/convert', upload.single('video'), async (req: Request, res: Response) => {
   let videoPath: string | null = null;
   let convertedPath: string | null = null;
