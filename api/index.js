@@ -1,3 +1,3 @@
-const handler = require('../dist/index.js').default;
-
-module.exports = handler;
+module.exports = (req, res) => {
+  res.status(200).json({ status: 'ok', message: 'Serverless Function is working' });
+};
