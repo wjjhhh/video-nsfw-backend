@@ -1,1 +1,5 @@
-const app = require('../dist/index.js'); module.exports = app;
+const app = require('../dist/index.js');
+
+module.exports = (req, res) => {
+  app(req, res);
+};
