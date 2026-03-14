@@ -33,4 +33,10 @@ const startServer = async () => {
   }
 };
 
-startServer();
+// Export app for Serverless Function
+export default app;
+
+// Start server only in local development
+if (process.env.NODE_ENV !== 'production') {
+  startServer();
+}
